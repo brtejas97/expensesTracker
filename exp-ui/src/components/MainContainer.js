@@ -24,7 +24,7 @@ const MainContainer = () => {
     return(
         <div>
             {
-                userToken&&localStorage.getItem('token') ? <NavComp/> : <Primal/> 
+                userToken&&localStorage.getItem('exp-token') ? <NavComp/> : <Primal/> 
             }
         </div>
     )
