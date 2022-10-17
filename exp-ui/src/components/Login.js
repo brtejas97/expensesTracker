@@ -42,14 +42,13 @@ const Login = (props) => {
     }
 
     return(
-        <div>
+        <div style={{
+            position: 'absolute', left: '50%', top: '50%',
+            transform: 'translate(-50%, -50%)'
+          }}>
             <br/>
             <h4>Login</h4>
-            {/* <Form>
-                <Form.Group  className="mb-3" controlId="exampleForm.ControlInput1">
-                    <Form.Control  type="email" placeholder="e-mail" />
-                </Form.Group>
-            </Form> */}
+            
             <form onSubmit={handleSubmit}>
                 <input type="text" name="email" placeholder="e-mail" value={email} onChange={handleChange}  /> {formErrors.email&&<span>{formErrors.email}</span>}
                 <br/><br/>

@@ -125,7 +125,7 @@ const Home = (props) => {
                 <div className="card-body">
                     <h6 className="card-title">Your total Budget</h6>
                     {/* <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6> */}
-                    <h4 className="card-text">INR {budget}</h4>
+                    <h4 className="card-text">{typeof budget === typeof(0) ? `INR ${budget}` : budget }</h4>
                     <span><a href="/settings" className="card-link">settings</a></span>
                 </div>
                 </div>

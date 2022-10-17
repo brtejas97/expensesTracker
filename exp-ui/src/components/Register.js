@@ -30,14 +30,11 @@ const Register = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         runValidations()
-        // dispatch(startUserReg(formData,props))
         if(Object.keys(errors).length===0){
             const formData = {
                 email:email,
                 password:password
             }
-            // setEmail('')
-            // setPassword('')
             dispatch(startRegUser(formData,props))
         }else{
             setFormErrors(errors)
@@ -45,16 +42,18 @@ const Register = (props) => {
     }
 
     return (
-        <div>
+        <div style={{
+            position: 'absolute', left: '50%', top: '50%',
+            transform: 'translate(-50%, -50%)'
+          }}>
             <br/>
             <h4>Register</h4>
             <form onSubmit={handleSubmit}>
             <input type="text" name="email" placeholder="e-mail" value={email} onChange={handleChange}  /> {formErrors.email&&<span>{formErrors.email}</span>}
                 <br/><br/>
-                <input type="text" name="password" placeholder="password" value={password} onChange={handleChange}  /> {formErrors.password&&<span>{formErrors.password}</span>}
+                <input type="password" name="password" placeholder="password" value={password} onChange={handleChange}  /> {formErrors.password&&<span>{formErrors.password}</span>}
                 <br/><br/>
                 <Button type="submit" variant="success" >submit</Button>
-                {/* <button>submit</button> */}
             </form>
         </div>
     )

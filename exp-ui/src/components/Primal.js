@@ -13,24 +13,15 @@ const Primal = () => {
             <h4>Login to your account to track your expenses</h4>
             <h4>If you don't have one, create NOW</h4>
             <hr/>
-            {/* <button>
-                <Link to='/login' >Login</Link>
-            </button> */}
-            <Button variant="primary" href="/login" >Login
-                {/* <Link to='/login' >Login</Link> */}
-            </Button>
+            
+            <Button variant="primary" href="/login" >Login</Button>
+
             &nbsp;&nbsp;&nbsp;
-            <Button variant="primary" href="/register" >Register
-                {/* <Link to='/register' ></Link> */}
-            </Button>
-            {/* <button>
-                <Link to='/register' >Register</Link>
-            </button> */}
-            {/* <hr/> */}
+
+            <Button variant="primary" href="/register" >Register</Button>
 
             <Route path='/login' component={Login} exact={true} />
             <Route path='/register' component={Register} exact={true} />
-            {/* <hr/> */}
         </div>
     )
 }
