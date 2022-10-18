@@ -26,7 +26,7 @@ const EachCatg = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         if(catgUpdEntry.trim().length==0){
-            alert('update catg field is empty')
+            alert('update category field is empty')
         }
         else {
             const body = {
@@ -48,7 +48,7 @@ const EachCatg = (props) => {
                         <form onSubmit={handleSubmit}>
                             <input type="text" value={catgUpdEntry} onChange={handleChange} />
                             &nbsp;&nbsp;
-                            <Button variant="success">save update</Button>
+                            <Button type="submit" variant="success">save update</Button>
                             &nbsp;&nbsp;
                             <Button variant="warning" onClick={()=>setUpdTgl(false)} >cancel update</Button>
                         </form>
