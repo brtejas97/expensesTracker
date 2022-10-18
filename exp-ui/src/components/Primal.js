@@ -4,6 +4,7 @@ import {Button} from "react-bootstrap"
 
 import Login from "./Login";
 import Register from "./Register";
+import PrimalImg from "./PrimalImg";
 
 const Primal = () => {
 
@@ -22,6 +23,7 @@ const Primal = () => {
 
             <Route path='/login' component={Login} exact={true} />
             <Route path='/register' component={Register} exact={true} />
+            <Route path='/' component={PrimalImg} exact={true} />
         </div>
     )
 }

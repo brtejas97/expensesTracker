@@ -1,6 +1,9 @@
 import React, {useState} from "react";
 import {useDispatch} from "react-redux"
 import { Button } from "react-bootstrap";
+import pngegg from '../imgs/pngegg.png'
+import moneyAll from '../imgs/moneyAll.png'
+import calcMoney from '../imgs/calcMoney.png'
 
 import { startRegUser } from "../actions/regAction";
 
@@ -42,10 +45,8 @@ const Register = (props) => {
     }
 
     return (
-        <div style={{
-            position: 'absolute', left: '50%', top: '50%',
-            transform: 'translate(-50%, -50%)'
-          }}>
+        <div style={{display:'flex',justifyContent: 'space-evenly'}}>
+            <div className="card" style={{borderColor:'white'}}>
             <br/>
             <h4>Register</h4>
             <form onSubmit={handleSubmit}>
@@ -55,6 +56,10 @@ const Register = (props) => {
                 <br/><br/>
                 <Button type="submit" variant="success" >submit</Button>
             </form>
+            </div>
+            <div className="card" style={{width: "30rem",borderColor:'white'}}>
+                <img src={calcMoney} />
+            </div>
         </div>
     )
 }

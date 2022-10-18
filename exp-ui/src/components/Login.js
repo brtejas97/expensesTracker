@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import { useDispatch } from "react-redux";
 import { Button } from "react-bootstrap"; 
+import pngegg from '../imgs/pngegg.png'
+import moneyAll from '../imgs/moneyAll.png'
 
 import {startGetToken} from '../actions/tokenAction'
 
@@ -42,20 +44,46 @@ const Login = (props) => {
     }
 
     return(
-        <div style={{
-            position: 'absolute', left: '50%', top: '50%',
-            transform: 'translate(-50%, -50%)'
-          }}>
+        // <div class="flex-container" >
+        //     {/* style={{
+        //     position: 'absolute', left: '50%', top: '50%',
+        //     transform: 'translate(-50%, -50%)'
+        //   }} */}
+        //     <br/>
+        //     <div style={{float:'left'}}>
+        //     <h4>Login</h4>
+            
+        //     <form onSubmit={handleSubmit}>
+        //         <input type="text" name="email" placeholder="e-mail" value={email} onChange={handleChange}  /> {formErrors.email&&<span>{formErrors.email}</span>}
+        //         <br/><br/>
+        //         <input type="password" name="password" placeholder="password" value={password} onChange={handleChange}  /> {formErrors.password&&<span>{formErrors.password}</span>}
+        //         <br/><br/>
+        //         <Button type="submit" variant="success">login</Button>
+        //     </form>
+        //     </div>
+        //     <div style={{float:'right'}}>
+        //         <img src="https://img.freepik.com/free-vector/childcare-expenses-abstract-concept-vector-illustration-child-care-tax-credit-family-budget-childcare-money-daycare-expenses-calculation-deduction-financial-plan-abstract-metaphor_335657-5908.jpg" />
+        //     </div>
+        // </div>
+
+        <div style={{display:'flex',justifyContent: 'space-evenly'}}>
+          <div className="card" style={{borderColor:'white'}}>
             <br/>
             <h4>Login</h4>
             
             <form onSubmit={handleSubmit}>
-                <input type="text" name="email" placeholder="e-mail" value={email} onChange={handleChange}  /> {formErrors.email&&<span>{formErrors.email}</span>}
+                <input type="text" name="email" placeholder="e-mail" value={email} onChange={handleChange}  /> {formErrors.email&&<b style={{fontSize:'12px',color:'red'}}>{formErrors.email}</b>}
                 <br/><br/>
-                <input type="password" name="password" placeholder="password" value={password} onChange={handleChange}  /> {formErrors.password&&<span>{formErrors.password}</span>}
+                <input type="password" name="password" placeholder="password" value={password} onChange={handleChange}  /> {formErrors.password&&<b style={{fontSize:'12px',color:'red'}}>{formErrors.password}</b>}
                 <br/><br/>
                 <Button type="submit" variant="success">login</Button>
             </form>
+            </div>
+
+            <div className="card" style={{width: "30rem",borderColor:'white'}}>
+                <img src={moneyAll} />
+                {/* <img src="https://img.freepik.com/free-vector/childcare-expenses-abstract-concept-vector-illustration-child-care-tax-credit-family-budget-childcare-money-daycare-expenses-calculation-deduction-financial-plan-abstract-metaphor_335657-5908.jpg" /> */}
+            </div>
         </div>
     )
 }
